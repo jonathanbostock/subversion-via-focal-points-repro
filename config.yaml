@@ -1,0 +1,27 @@
+# Configuration for Subversion via Focal Points Reproduction
+model: claude-3-7-sonnet-latest
+temperature: 1.0
+max_rounds: 50
+samples_per_meta: 10
+max_backdoor_attempts: 10
+variations: [1, 2, 3]
+runs_per_variation: 5
+
+# API settings
+api_max_retries: 3
+api_retry_delay: 1.0
+rate_limit_delay: 0.1
+
+# Dataset settings
+apps_problem_range: [1500, 1999]
+target_solvable_problems: 218
+
+# Experiment settings
+max_tokens_prompt: 4000
+max_tokens_solution: 2000
+max_audit_examples: 17
+
+# Logging
+log_level: INFO
+save_api_calls: true
+save_collusion_data: true
